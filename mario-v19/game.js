@@ -342,10 +342,6 @@ class Platforms {
     const numBlocks = Math.ceil(worldWidth / this.blockSize);
 
     for (let x = 0; x <= numBlocks; x++) {
-      // Skip a small range to create a hole
-      if (x >= 30 && x <= 32) {
-        continue;
-      }
       this.group
         .create(x * this.blockSize, this.scene.scale.height - this.blockSize / 2, 'groundBlock')
         .setOrigin(0, 0.5)
